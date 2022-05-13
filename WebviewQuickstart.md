@@ -170,6 +170,59 @@ class ViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHan
 }
 ```
 
+### Example JS Plugin for mobile testing
+
+```javascript
+<html>
+<head>
+  <!-- utf-8 is required for JS Plugin default fonts -->
+  <meta charset="utf-8" />
+  <meta name=“viewport” content=“width=device-width, initial-scale=1.0">
+  <script src="https://static.vouched.id/widget/vouched-2.0.0.js"></script>
+  <script type='text/javascript'>
+
+    (function() {
+      var vouched = Vouched({
+      // Optional verification properties.
+        verification: {
+        },
+        liveness: 'straight',
+
+        appId: '<PUBLIC_KEY_HERE>',
+       // your webhook for POST verification processing
+       // callbackURL: 'https://website.com/webhook',
+
+        // mobile handoff
+        crossDevice: false,
+        crossDeviceQRCode: false,
+        crossDeviceSMS: false,
+
+        // called when the verification is completed.
+        onDone: (job) => {
+          // token used to query jobs
+          console.log("Verification complete", { token: job.token });
+          //VouchedJS.onVerifyResults(job.result.success === true, JSON.stringify(job));
+          window.webkit.messageHandlers.onVouchedVerify.postMessage(JSON.stringify(job));
+        },
+
+        // theme
+        theme: {
+          name: 'avant',
+        },
+      });
+      vouched.mount("#vouched-element");
+    })();
+
+  </script>
+</head>
+<body>
+  <div id='vouched-element' style="height: 100%"/>
+</body>
+</html>
+```
+
+
+
 ### Other integration considerations
 
 Not discussed in this document is the notion of sharing one plugin configuration with multiple platforms, ie a configuration to cover Android WebView, iOS WKWebView, mobile browser applications, etc. One potential strategy to employ here is to test for the existence of the callback functions for each target, and if it exists, return the data, otherwise, move on to the next target.
