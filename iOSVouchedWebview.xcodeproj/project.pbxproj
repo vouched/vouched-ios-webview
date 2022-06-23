@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC0DBAD02822F79E00F20B0B /* Settings.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = EC0DBACF2822F79E00F20B0B /* Settings.xcconfig */; };
 		ECEBBC5B280E3835005F9BCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEBBC5A280E3835005F9BCC /* AppDelegate.swift */; };
 		ECEBBC5D280E3835005F9BCC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEBBC5C280E3835005F9BCC /* SceneDelegate.swift */; };
 		ECEBBC5F280E3835005F9BCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEBBC5E280E3835005F9BCC /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC0DBACF2822F79E00F20B0B /* Settings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Settings.xcconfig; sourceTree = "<group>"; };
 		ECEBBC57280E3835005F9BCC /* iOSVouchedWebview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSVouchedWebview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECEBBC5A280E3835005F9BCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECEBBC5C280E3835005F9BCC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		ECEBBC4E280E3835005F9BCC = {
 			isa = PBXGroup;
 			children = (
+				EC0DBACF2822F79E00F20B0B /* Settings.xcconfig */,
 				ECEBBC59280E3835005F9BCC /* iOSVouchedWebview */,
 				ECEBBC70280E3837005F9BCC /* iOSVouchedWebviewTests */,
 				ECEBBC7A280E3837005F9BCC /* iOSVouchedWebviewUITests */,
@@ -236,6 +239,7 @@
 			files = (
 				ECEBBC67280E3837005F9BCC /* LaunchScreen.storyboard in Resources */,
 				ECEBBC8B280E39F6005F9BCC /* camera.js in Resources */,
+				EC0DBAD02822F79E00F20B0B /* Settings.xcconfig in Resources */,
 				ECEBBC64280E3837005F9BCC /* Assets.xcassets in Resources */,
 				ECEBBC62280E3835005F9BCC /* Main.storyboard in Resources */,
 			);
@@ -322,6 +326,7 @@
 /* Begin XCBuildConfiguration section */
 		ECEBBC7F280E3837005F9BCC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC0DBACF2822F79E00F20B0B /* Settings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -383,6 +388,7 @@
 		};
 		ECEBBC80280E3837005F9BCC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC0DBACF2822F79E00F20B0B /* Settings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -443,7 +449,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7PKK3DW985;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSVouchedWebview/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -471,7 +477,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7PKK3DW985;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSVouchedWebview/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
