@@ -8,9 +8,9 @@
 import UIKit
 
 @main
+// Note: in iOS 16 and above, a main thread warning is raised if running a webview.
+// https://developer.apple.com/forums/thread/713290
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

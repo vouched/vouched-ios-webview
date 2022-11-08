@@ -11,12 +11,13 @@
 		ECEBBC5D280E3835005F9BCC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEBBC5C280E3835005F9BCC /* SceneDelegate.swift */; };
 		ECEBBC5F280E3835005F9BCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEBBC5E280E3835005F9BCC /* ViewController.swift */; };
 		ECEBBC62280E3835005F9BCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECEBBC60280E3835005F9BCC /* Main.storyboard */; };
-		ECEBBC64280E3837005F9BCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECEBBC63280E3837005F9BCC /* Assets.xcassets */; };
 		ECEBBC67280E3837005F9BCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECEBBC65280E3837005F9BCC /* LaunchScreen.storyboard */; };
 		ECEBBC72280E3837005F9BCC /* iOSVouchedWebviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEBBC71280E3837005F9BCC /* iOSVouchedWebviewTests.swift */; };
 		ECEBBC7C280E3837005F9BCC /* iOSVouchedWebviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEBBC7B280E3837005F9BCC /* iOSVouchedWebviewUITests.swift */; };
 		ECEBBC7E280E3837005F9BCC /* iOSVouchedWebviewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEBBC7D280E3837005F9BCC /* iOSVouchedWebviewUITestsLaunchTests.swift */; };
 		ECEBBC8B280E39F6005F9BCC /* camera.js in Resources */ = {isa = PBXBuildFile; fileRef = ECEBBC8A280E39F6005F9BCC /* camera.js */; };
+		ECFC3B4C29156E300090A2F0 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECFC3B4A29156E300090A2F0 /* Colors.xcassets */; };
+		ECFC3B4D29156E300090A2F0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECFC3B4B29156E300090A2F0 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +43,6 @@
 		ECEBBC5C280E3835005F9BCC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ECEBBC5E280E3835005F9BCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ECEBBC61280E3835005F9BCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		ECEBBC63280E3837005F9BCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECEBBC66280E3837005F9BCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECEBBC68280E3837005F9BCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECEBBC6D280E3837005F9BCC /* iOSVouchedWebviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSVouchedWebviewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +51,8 @@
 		ECEBBC7B280E3837005F9BCC /* iOSVouchedWebviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSVouchedWebviewUITests.swift; sourceTree = "<group>"; };
 		ECEBBC7D280E3837005F9BCC /* iOSVouchedWebviewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSVouchedWebviewUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		ECEBBC8A280E39F6005F9BCC /* camera.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = camera.js; sourceTree = "<group>"; };
+		ECFC3B4A29156E300090A2F0 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		ECFC3B4B29156E300090A2F0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +107,8 @@
 				ECEBBC5C280E3835005F9BCC /* SceneDelegate.swift */,
 				ECEBBC5E280E3835005F9BCC /* ViewController.swift */,
 				ECEBBC60280E3835005F9BCC /* Main.storyboard */,
-				ECEBBC63280E3837005F9BCC /* Assets.xcassets */,
+				ECFC3B4A29156E300090A2F0 /* Colors.xcassets */,
+				ECFC3B4B29156E300090A2F0 /* Images.xcassets */,
 				ECEBBC65280E3837005F9BCC /* LaunchScreen.storyboard */,
 				ECEBBC68280E3837005F9BCC /* Info.plist */,
 				ECEBBC8A280E39F6005F9BCC /* camera.js */,
@@ -234,9 +237,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECFC3B4C29156E300090A2F0 /* Colors.xcassets in Resources */,
 				ECEBBC67280E3837005F9BCC /* LaunchScreen.storyboard in Resources */,
 				ECEBBC8B280E39F6005F9BCC /* camera.js in Resources */,
-				ECEBBC64280E3837005F9BCC /* Assets.xcassets in Resources */,
+				ECFC3B4D29156E300090A2F0 /* Images.xcassets in Resources */,
 				ECEBBC62280E3835005F9BCC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

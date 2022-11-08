@@ -14,7 +14,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHan
     let vouchedHandler = "onVouchedVerify"
     var webView: WKWebView!
     // adjust the url and/or app public key to point to your instance
-    let appUrl = "https://7556-71-212-154-144.ngrok.io"
+    let appUrl = "https://static.vouched.id/widget/demo/index.html#/"
     
     override func loadView() {
         let config = WKWebViewConfiguration()
