@@ -8,11 +8,12 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHandler {
+class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler {
     
     // the handler name injected into the web app for iOS webviews.
     let vouchedHandler = "onVouchedVerify"
     var webView: WKWebView!
+    var navBar: UIToolbar!
     // adjust the url and/or app public key to point to your instance
     let appUrl = "https://static.vouched.id/widget/demo/index.html#/"
     
@@ -23,9 +24,12 @@ class ViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHan
         config.allowsInlineMediaPlayback = true
         
         webView = WKWebView(frame: .zero, configuration: config)
+        webView.translatesAutoresizingMaskIntoConstraints = false
         webView.navigationDelegate = self
+        webView.uiDelegate = self
         
         view = webView
+        setNavBar()
 
     }
     
@@ -34,8 +38,8 @@ class ViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHan
         webView.load(URLRequest(url: url))
     }
     
-    // implements WKScriptMessageHandler. For our callback, we will look
-    // for messages sent by the vouchedHandler, and operate on them
+    // implements WKScriptMessageHandler. In this demo, we will look
+    // for callbacks sent by vouchedHandler, and operate on them
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         if message.name == vouchedHandler {
             
@@ -66,6 +70,50 @@ class ViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHan
         }
         return nil
     }
+    
+    // uncomment this section to allow web links to be used, if they are targeting
+    // this webview. Note: Make sure to limit this action to only operate on URLs
+    // you deem trustworthy
+    // thanks to https://dev.to/nemecek_f/how-to-open-blank-links-in-wkwebview-in-ios-24a
+    /*
+     func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+            if let frame = navigationAction.targetFrame,
+                frame.isMainFrame {
+                return nil
+            }
+            webView.load(navigationAction.request)
+            // reveal a toolbar to allow user to navigate back to plugin
+            navBar.isHidden = false
+            return nil
+    }
+     */
+    
+    fileprivate func setNavBar() {
+        let screenWidth = self.view.bounds.width
+        // take up all the space on the right of the back button. To center, add
+        // another flexspace to the left of the back button
+        let flexSpaceR = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        //let flexSpaceL = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let backButton = UIBarButtonItem(title: "Back", style:.plain, target: self, action: #selector(goBack))
+        navBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 44))
+        navBar.isTranslucent = false
+        navBar.translatesAutoresizingMaskIntoConstraints = false
+        // center the back button
+        navBar.items = [backButton, flexSpaceR]
+        webView.addSubview(navBar)
+        navBar.sizeToFit()
+        // align to bottom of the webview programmatically
+        navBar.bottomAnchor.constraint(equalTo: webView.bottomAnchor, constant: 0).isActive = true
+        navBar.leadingAnchor.constraint(equalTo: webView.leadingAnchor, constant: 0).isActive = true
+        navBar.trailingAnchor.constraint(equalTo: webView.trailingAnchor, constant: 0).isActive = true
+        navBar.isHidden = true
+      }
+      @objc private func goBack() {
+          if webView.canGoBack {
+              webView.goBack()
+              navBar.isHidden = true
+          }
+      }
 
 }
 

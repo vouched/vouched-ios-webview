@@ -8,7 +8,8 @@
 import UIKit
 
 @main
-// Note: in iOS 16 and above, a main thread warning is raised if running a webview.
+// Note: in iOS 16 and above, a main thread warning is raised if running a webview. This
+// in fact is a thread inside of Apple's security framework, which is a known issue
 // https://developer.apple.com/forums/thread/713290
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
